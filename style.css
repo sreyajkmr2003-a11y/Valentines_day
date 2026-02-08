@@ -21,8 +21,8 @@ body {
 }
 
 #envelope {
-  width: 460px;
-  transition: transform 0.3s ease;
+  width: 260px;
+  transition: transform 0.2s ease;
 }
 
 #envelope-container:hover #envelope {
@@ -36,9 +36,9 @@ body {
   color: #ff4d6d;
 }
 
-/* Letter screen */
+/* Letter Screen */
 #letter-container {
-  display: none;
+  display: none; /* IMPORTANT */
   position: fixed;
   inset: 0;
   background: #ee9eb7;
@@ -47,15 +47,16 @@ body {
   justify-content: center;
 }
 
-/* Letter window */
+/* Letter Window */
 .letter-window {
   background: rgb(188, 141, 141);
   padding: 25px;
   border-radius: 16px;
-  width: 360px;
+  width: 90%;
+  max-width: 360px;
   text-align: center;
   transform: scale(0.8);
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .letter-window.open {
@@ -72,10 +73,12 @@ body {
   margin-bottom: 10px;
 }
 
-/* Cat */
+/* Video */
 #letter-cat {
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   margin: 15px 0;
+  border-radius: 12px;
 }
 
 /* Buttons */
@@ -87,21 +90,19 @@ body {
 }
 
 .btn {
-  width: 130px;
+  width: 120px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .btn:hover {
   transform: scale(1.1);
 }
 
-/* Final text */
+/* Final Text */
 #final-text {
   display: none;
   font-size: 18px;
   color: #ff4d6d;
   margin-top: 15px;
-  font-family: 'Poppins', sans-serif;
 }
-
