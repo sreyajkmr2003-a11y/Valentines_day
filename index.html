@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ValentineS Day Letter</title>
+  <title>Valentine’s Day Letter 💖</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Google Font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Poppins&display=swap"
     rel="stylesheet"
   />
 </head>
 
 <body>
+
   <!-- Envelope Screen -->
   <div id="envelope-container">
-    <img src="Y55ZnPZP8C.gif" id="envelope" alt="Envelope" />
+    <img src="envelope.gif" id="envelope" alt="Envelope" />
     <p>♡ A Letter for You ♡</p>
   </div>
 
@@ -29,7 +30,16 @@
     <div class="letter-window">
       <h1 id="letter-title">Will you be my Valentine?</h1>
 
-      <img src="milk-and-mocha-hugs.gif" id="letter-cat" alt="Cat" />
+      <!-- VIDEO (MP4 – MOBILE SAFE) -->
+      <video
+        id="letter-cat"
+        autoplay
+        loop
+        muted
+        playsinline
+      >
+        <source src="milk-and-mocha-hugs.mp4" type="video/mp4" />
+      </video>
 
       <div id="letter-buttons">
         <img src="yes.png" class="btn yes-btn" alt="Yes" />
@@ -37,7 +47,8 @@
       </div>
 
       <p id="final-text">
-        <strong>Happy Valentines Day Chukkuduooo:</strong> Every time I'm with you, I feel complete & I LOVE YOU 😘😘 💕
+        <strong>Happy Valentine’s Day Chukkudoooo 💕</strong><br />
+        Every moment with you feels magical 😘
       </p>
     </div>
   </div>
@@ -46,4 +57,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
