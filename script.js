@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
     envelopeContainer.style.display = "none";
     letterContainer.style.display = "flex";
 
+      // 🔥 FORCE VIDEO TO START AFTER VISIBLE
+  letterVideo.load();
+  letterVideo.play();
+
     setTimeout(() => {
       letterWindow.classList.add("open");
     }, 50);
@@ -46,3 +50,4 @@ document.addEventListener("DOMContentLoaded", () => {
   noBtn.addEventListener("mouseover", moveNo);
   noBtn.addEventListener("touchstart", moveNo);
 });
+
