@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page */
+body {
+  height: 100vh;
+  background: #d7cace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Envelope */
+#envelope-container {
+  text-align: center;
+  cursor: pointer;
+}
+
+#envelope {
+  width: 460px;
+  transition: transform 0.3s ease;
+}
+
+#envelope-container:hover #envelope {
+  transform: scale(1.08);
+}
+
+#envelope-container p {
+  margin-top: 10px;
+  font-family: 'Pixelify Sans', cursive;
+  font-size: 20px;
+  color: #ff4d6d;
+}
+
+/* Letter screen */
+#letter-container {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #ee9eb7;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Letter window */
+.letter-window {
+  background: rgb(188, 141, 141);
+  padding: 25px;
+  border-radius: 16px;
+  width: 360px;
+  text-align: center;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.letter-window.open {
+  transform: scale(1);
+}
+
+.letter-window.final {
+  background: #fff0f6;
+}
+
+/* Title */
+#letter-title {
+  font-family: 'Pixelify Sans', cursive;
+  margin-bottom: 10px;
+}
+
+/* Cat */
+#letter-cat {
+  width: 280px;
+  margin: 15px 0;
+}
+
+/* Buttons */
+#letter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn {
+  width: 130px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Final text */
+#final-text {
+  display: none;
+  font-size: 18px;
+  color: #ff4d6d;
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
