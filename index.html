@@ -1,56 +1,57 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Valentine's Day Letter</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Valentine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Envelope Screen -->
-  <div id="envelope-container">
-    <img src="Y55ZnPZP8C.gif" id="envelope" alt="Envelope">
-    <p>♡ A Letter for You ♡</p>
-  </div>
+<!-- Envelope -->
+<div id="envelope-container">
+  <img src="Y55ZnPZP8C.gif" id="envelope">
+  <p>♡ A Letter for You ♡</p>
+</div>
 
-  <!-- Letter Screen -->
-  <div id="letter-container">
-    <div class="letter-window">
+<!-- Letter -->
+<div id="letter-container">
+  <div class="letter-window">
 
-      <!-- STEP IMAGES -->
-      <img src="step1.JPEG" class="step-img active">
-      <img src="step2.JPEG" class="step-img">
-      <img src="milk-and-mocha-hugs.gif" class="step-img">
+    <!-- STEP 1 -->
+    <img src="step1.jpg" class="step-img">
 
-      <!-- FINAL CONTENT -->
-      <div id="final-content">
-        <h1>Will you be my Valentine? 💕</h1>
+    <!-- STEP 2 -->
+    <img src="step2.jpg" class="step-img">
 
-        <div id="letter-buttons">
-          <img src="yes.png" class="btn yes-btn" alt="Yes">
-          <img src="no.png" class="btn no-btn" alt="No">
-        </div>
+    <!-- QUESTION SLIDE -->
+    <div id="question-slide">
+      <img src="step1.gif" class="final-gif">
 
-        <p id="final-text">
-          <strong>Happy Valentine's Day Chukkuduooo 💖</strong><br>
-          Every time I'm with you, I feel complete & I LOVE YOU 😘😘
-        </p>
+      <h1>Will you be my Valentine? 💕</h1>
+
+      <div>
+        <img src="yes.png" id="yesBtn" class="btn">
+        <img src="no.png" class="btn">
       </div>
-
     </div>
-  </div>
 
-  <!-- JS -->
-  <script src="script.js"></script>
+    <!-- FINAL SLIDE -->
+    <div id="final-slide">
+      <img src="milk-and-mocha-hugs.gif" class="final-gif">
+
+      <p>
+        <strong>Happy Valentine's Day Chukkuduooo 💖</strong><br>
+        Every moment with you means everything to me 😘
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
 
