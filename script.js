@@ -3,31 +3,42 @@ const envelopeContainer = document.getElementById("envelope-container");
 const letterContainer = document.getElementById("letter-container");
 
 const steps = document.querySelectorAll(".step-img");
-const finalContent = document.getElementById("final-content");
+const questionSlide = document.getElementById("question-slide");
+const finalSlide = document.getElementById("final-slide");
+const yesBtn = document.getElementById("yesBtn");
 
-let currentStep = 0;
-let interval;
+let index = 0;
 
 // Open envelope
-envelope.addEventListener("click", () => {
+envelope.onclick = () => {
   envelopeContainer.style.display = "none";
   letterContainer.style.display = "block";
-  playSteps();
-});
+  showStep();
+};
 
-function playSteps() {
-  steps[currentStep].classList.add("active");
+function showStep() {
+  if (index < steps.length) {
+    steps[index].style.display = "block";
+    setTimeout(() => steps[index].classList.add("show"), 50);
 
-  interval = setInterval(() => {
-    steps[currentStep].classList.remove("active");
-    currentStep++;
-
-    if (currentStep < steps.length) {
-      steps[currentStep].classList.add("active");
-    } else {
-      clearInterval(interval);
-      finalContent.classList.add("show");
-    }
-  }, 2600); // time per image
+    index++;
+    setTimeout(showStep, 2500);
+  } else {
+    questionSlide.style.display = "block";
+    setTimeout(() => questionSlide.classList.add("show"), 50);
+  }
 }
+
+// YES button logic
+yesBtn.onclick = () => {
+  questionSlide.classList.remove("show");
+
+  setTimeout(() => {
+    questionSlide.style.display = "none";
+    finalSlide.style.display = "block";
+    setTimeout(() => finalSlide.classList.add("show"), 50);
+  }, 600);
+};
+
+
 
