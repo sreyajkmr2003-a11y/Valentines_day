@@ -73,14 +73,14 @@ body {
 
 /* Hidden initially */
 #letter-title,
-#letter-cat,
+#letter-gif,
 #letter-buttons,
 #final-text {
   display: none;
 }
 
-/* Video */
-#letter-cat {
+/* GIF */
+#letter-gif {
   width: 100%;
   border-radius: 12px;
   margin: 10px 0;
