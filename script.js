@@ -1,50 +1,33 @@
-const envelope = document.getElementById("envelope-container");
-const letter = document.getElementById("letter-container");
+const envelope = document.getElementById("envelope");
+const envelopeContainer = document.getElementById("envelope-container");
+const letterContainer = document.getElementById("letter-container");
 
-const images = document.querySelectorAll(".seq-img");
-const imageBox = document.getElementById("image-sequence");
+const steps = document.querySelectorAll(".step-img");
+const finalContent = document.getElementById("final-content");
 
-const title = document.getElementById("letter-title");
-const gif = document.getElementById("letter-gif");
-const buttons = document.getElementById("letter-buttons");
-const finalText = document.getElementById("final-text");
+let currentStep = 0;
+let interval;
 
-const yesBtn = document.querySelector(".yes-btn");
-const noBtn = document.querySelector(".no-btn");
-
-let current = 0;
-
-/* Open envelope */
+// Open envelope
 envelope.addEventListener("click", () => {
-  envelope.style.display = "none";
-  letter.style.display = "block";
+  envelopeContainer.style.display = "none";
+  letterContainer.style.display = "block";
+  playSteps();
 });
 
-/* Image sequence */
-letter.addEventListener("click", () => {
-  if (current < images.length - 1) {
-    images[current].classList.remove("active");
-    current++;
-    images[current].classList.add("active");
-  } else {
-    imageBox.style.display = "none";
-    title.style.display = "block";
-    gif.style.display = "block";
-    buttons.style.display = "flex";
-  }
-});
+function playSteps() {
+  steps[currentStep].classList.add("active");
 
-/* YES */
-yesBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  buttons.style.display = "none";
-  finalText.style.display = "block";
-});
+  interval = setInterval(() => {
+    steps[currentStep].classList.remove("active");
+    currentStep++;
 
-/* NO button run 😏 */
-noBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  noBtn.style.position = "absolute";
-  noBtn.style.top = Math.random() * 70 + "%";
-  noBtn.style.left = Math.random() * 70 + "%";
-});
+    if (currentStep < steps.length) {
+      steps[currentStep].classList.add("active");
+    } else {
+      clearInterval(interval);
+      finalContent.classList.add("show");
+    }
+  }, 2600); // time per image
+}
+
