@@ -5,7 +5,7 @@ const images = document.querySelectorAll(".seq-img");
 const imageBox = document.getElementById("image-sequence");
 
 const title = document.getElementById("letter-title");
-const video = document.getElementById("letter-cat");
+const gif = document.getElementById("letter-gif");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 
@@ -29,9 +29,8 @@ letter.addEventListener("click", () => {
   } else {
     imageBox.style.display = "none";
     title.style.display = "block";
-    video.style.display = "block";
+    gif.style.display = "block";
     buttons.style.display = "flex";
-    video.play().catch(() => {});
   }
 });
 
@@ -42,7 +41,7 @@ yesBtn.addEventListener("click", (e) => {
   finalText.style.display = "block";
 });
 
-/* NO (runaway 😏) */
+/* NO button run 😏 */
 noBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   noBtn.style.position = "absolute";
