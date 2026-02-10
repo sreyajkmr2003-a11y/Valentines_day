@@ -5,7 +5,6 @@
   <title>Valentine’s Day Letter 💖</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Fonts -->
@@ -21,16 +20,24 @@
 
   <!-- Envelope Screen -->
   <div id="envelope-container">
-    <img src="envelope.gif" id="envelope" alt="Envelope" />
+    <img src="envelope.gif" id="envelope" />
     <p>♡ A Letter for You ♡</p>
   </div>
 
   <!-- Letter Screen -->
   <div id="letter-container">
+
+    <!-- Image sequence -->
+    <div id="image-sequence">
+      <img src="img1.png" class="seq-img active" />
+      <img src="img2.png" class="seq-img" />
+      <img src="img3.png" class="seq-img" />
+      <p id="tap-text">Tap to continue 💕</p>
+    </div>
+
     <div class="letter-window">
       <h1 id="letter-title">Will you be my Valentine?</h1>
 
-      <!-- VIDEO (MP4 – MOBILE SAFE) -->
       <video
         id="letter-cat"
         autoplay
@@ -42,8 +49,8 @@
       </video>
 
       <div id="letter-buttons">
-        <img src="yes.png" class="btn yes-btn" alt="Yes" />
-        <img src="no.png" class="btn no-btn" alt="No" />
+        <img src="yes.png" class="btn yes-btn" />
+        <img src="no.png" class="btn no-btn" />
       </div>
 
       <p id="final-text">
@@ -53,7 +60,6 @@
     </div>
   </div>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
